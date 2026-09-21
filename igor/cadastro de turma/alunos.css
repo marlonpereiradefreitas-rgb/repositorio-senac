@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #f4f6f9;
+    padding: 40px;
+}
+
+h1{
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+label{
+    font-weight: bold;
+    color: #333;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #0d6efd;
+}
+
+button[type="submit"]{
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+button[type="submit"]:hover{
+    background: #084298;
+}
+
+hr{
+    margin: 35px auto;
+    width: 90%;
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+thead{
+    background: #003366;
+    color: white;
+}
+
+th,
+td{
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even){
+    background: #f2f2f2;
+}
+
+tbody tr:hover{
+    background: #dbe9ff;
+}
+
+td button{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 3px;
+}
+
+td button:first-child{
+    background: #ffc107;
+    color: black;
+}
+
+td button:last-child{
+    background: #dc3545;
+}
+
+td button:hover{
+    opacity: .85;
+}
+
+@media(max-width:768px){
+
+    form{
+        width: 95%;
+    }
+
+    table{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td{
+        padding: 8px;
+    }
+
+}
+
+.voltar{
+    width:200px;
+    margin:20px auto;
+    display:block;
+    border-radius: 5px;
+    background:#0267cc;
+}
+
+.voltar:hover{
+    background:#3a9cf7;
+}

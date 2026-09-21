@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --principal: #0f766e;
+    --principal-escuro: #115e59;
+    --principal-claro: #14b8a6;
+    --fundo: #f0fdfa;
+    --branco: #ffffff;
+    --texto: #134e4a;
+    --texto-secundario: #64748b;
+    --borda: #ccfbf1;
+    --vermelho: #dc2626;
+    --sombra: 0 10px 30px rgba(15, 118, 110, 0.10);
+    --raio: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f0fdfa, #ffffff, #ecfeff);
+    color: var(--texto);
+}
+
+header {
+    background: linear-gradient(135deg, #115e59, #0f766e);
+    color: white;
+    padding: 24px 6%;
+    box-shadow: 0 5px 20px rgba(15, 118, 110, 0.2);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+
+main {
+    width: 92%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+main > h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 12px;
+    color: var(--principal-escuro);
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: var(--raio);
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra);
+    margin-bottom: 25px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(15, 118, 110, 0.14);
+}
+
+.card p {
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--principal);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.12);
+}
+
+button {
+    width: 100%;
+    padding: 13px 18px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 5px 12px rgba(15,118,110,0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: var(--raio);
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra);
+}
+
+thead {
+    background: linear-gradient(135deg, #115e59, #0f766e);
+}
+
+th {
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f0fdfa;
+}
+
+td button {
+    width: auto;
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+a {
+    color: var(--principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#mensagem {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    background: #f0fdfa;
+    color: var(--principal-escuro);
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        min-width: 700px;
+    }
+}

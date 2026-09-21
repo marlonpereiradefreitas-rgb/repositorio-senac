@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Burger</title>
+    <link rel="stylesheet" href="devburguer.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍔 Dev Burger</h1>
+        <p>Monte seu pedido</p>
+    </header>
+
+    <div class="progresso">
+        <div id="barra"></div>
+    </div>
+
+    <section id="etapa1" class="etapa">
+
+        <h2>Escolha seu Hambúrguer</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="x-burger.jpg" alt="X-Burger">
+                <h3>X-Burger</h3>
+                <p>Pão brioche, hambúrguer artesanal, cheddar, alface, tomate e molho especial.</p>
+                <h4>R$ 28,90</h4>
+
+                <input
+                    type="radio"
+                    name="hamburguer"
+                    value="X-Burger"
+                    data-preco="28.90">
+            </div>
+
+            <div class="card">
+                <img src="xsalada.jpg" alt="X-Salada">
+                <h3>X-Salada</h3>
+                <p>Pão, hambúrguer artesanal, presunto, queijo, alface, tomate e milho.</p>
+                <h4>R$ 30,90</h4>
+
+                <input
+                    type="radio"
+                    name="hamburguer"
+                    value="X-Salada"
+                    data-preco="30.90">
+            </div>
+
+            <div class="card">
+                <img src="bacon.jpg" alt="Bacon Burger">
+                <h3>Bacon Burger</h3>
+                <p>Pão australiano, hambúrguer artesanal, cheddar, bacon crocante e cebola caramelizada.</p>
+                <h4>R$ 36,90</h4>
+
+                <input
+                    type="radio"
+                    name="hamburguer"
+                    value="Bacon Burger"
+                    data-preco="36.90">
+            </div>
+
+            <div class="card">
+                <img src="chicken.jpg" alt="Chicken Burger">
+                <h3>Chicken Burger</h3>
+                <p>Pão, frango empanado, queijo prato, alface e maionese especial.</p>
+                <h4>R$ 32,90</h4>
+
+                <input
+                    type="radio"
+                    name="hamburguer"
+                    value="Chicken Burger"
+                    data-preco="32.90">
+            </div>
+
+        </div>
+
+        <button onclick="proximaEtapa(2)">
+            Próximo
+        </button>
+
+    </section>
+
+    <section id="etapa2" class="etapa">
+
+        <h2>Escolha sua Bebida</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Coca-Cola</h3>
+                <p>R$ 8,00</p>
+
+                <input
+                    type="radio"
+                    name="bebida"
+                    value="Coca-Cola"
+                    data-preco="8">
+            </div>
+
+            <div class="card">
+                <h3>Coca Zero</h3>
+                <p>R$ 8,00</p>
+
+                <input
+                    type="radio"
+                    name="bebida"
+                    value="Coca Zero"
+                    data-preco="8">
+            </div>
+
+            <div class="card">
+                <h3>Guaraná</h3>
+                <p>R$ 7,00</p>
+
+                <input
+                    type="radio"
+                    name="bebida"
+                    value="Guaraná"
+                    data-preco="7">
+            </div>
+
+            <div class="card">
+                <h3>Fanta Laranja</h3>
+                <p>R$ 7,00</p>
+
+                <input
+                    type="radio"
+                    name="bebida"
+                    value="Fanta Laranja"
+                    data-preco="7">
+            </div>
+
+            <div class="card">
+                <h3>Água</h3>
+                <p>R$ 4,00</p>
+
+                <input
+                    type="radio"
+                    name="bebida"
+                    value="Água"
+                    data-preco="4">
+            </div>
+
+            <div class="card">
+                <h3>Suco Natural</h3>
+                <p>R$ 10,00</p>
+
+                <input
+                    type="radio"
+                    name="bebida"
+                    value="Suco Natural"
+                    data-preco="10">
+            </div>
+
+        </div>
+
+        <button onclick="voltarEtapa(1)">
+            Voltar
+        </button>
+
+        <button onclick="proximaEtapa(3)">
+            Próximo
+        </button>
+
+    </section>
+
+
+    <section id="etapa3" class="etapa">
+
+        <h2>Adicionais</h2>
+
+        <div class="adicionais">
+
+            <label><input type="checkbox" value="Bacon" data-preco="5"> Bacon (+R$5)</label>
+
+            <label><input type="checkbox" value="Cheddar" data-preco="4"> Cheddar (+R$4)</label>
+
+            <label><input type="checkbox" value="Catupiry" data-preco="4"> Catupiry (+R$4)</label>
+
+            <label><input type="checkbox" value="Onion Rings" data-preco="10"> Onion Rings (+R$10)</label>
+
+            <label><input type="checkbox" value="Batata Frita" data-preco="12"> Batata Frita (+R$12)</label>
+
+            <label><input type="checkbox" value="Milk Shake" data-preco="18"> Milk Shake (+R$18)</label>
+
+            <label><input type="checkbox" value="Brownie" data-preco="12"> Brownie (+R$12)</label>
+
+            <label><input type="checkbox" value="Sorvete" data-preco="10"> Sorvete (+R$10)</label>
+
+        </div>
+
+        <br>
+
+        <textarea
+            id="observacao"
+            rows="5"
+            placeholder="Observações do pedido">
+        </textarea>
+
+        <br><br>
+
+        <button onclick="voltarEtapa(2)">
+            Voltar
+        </button>
+
+        <button onclick="finalizarPedido()">
+            Finalizar Pedido
+        </button>
+
+    </section>
+
+
+    <section id="resumo" class="etapa">
+
+        <h2>Resumo do Pedido</h2>
+
+        <img id="imagemResumo" width="250">
+
+        <h3 id="resHamburguer"></h3>
+
+        <h3 id="resBebida"></h3>
+
+        <p id="resAdicionais"></p>
+
+        <p id="resObs"></p>
+
+        <h2 id="valorTotal"></h2>
+
+        <button onclick="novoPedido()">
+            Novo Pedido
+        </button>
+
+    </section>
+
+    <script src="devburguer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Animal - Clínica Veterinária</title>
+    <link rel="stylesheet" href="css/visual.css">
+</head>
+<body>
+
+<header>
+    <h1>Clínica Veterinária</h1>
+
+    <nav>
+        <a href="home.html">Início</a>
+        <a href="animais.html">Animais</a>
+        <a href="consultas.html">Consultas</a>
+        <a href="veterinarios.html">Veterinários</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="card">
+
+        <h2>Cadastrar Animal</h2>
+
+        <form id="formAnimal">
+
+            <label for="nome">Nome do animal</label>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Ex: Rex"
+                required
+            >
+
+            <label for="especie">Espécie</label>
+            <select id="especie" required>
+                <option value="">Selecione</option>
+                <option value="Cachorro">Cachorro</option>
+                <option value="Gato">Gato</option>
+                <option value="Ave">Ave</option>
+                <option value="Coelho">Coelho</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="raca">Raça</label>
+            <input
+                type="text"
+                id="raca"
+                placeholder="Ex: Golden Retriever"
+                required
+            >
+
+            <label for="idade">Idade</label>
+            <input
+                type="number"
+                id="idade"
+                min="0"
+                placeholder="Idade em anos"
+                required
+            >
+
+            <label for="dono">Nome do dono</label>
+            <input
+                type="text"
+                id="dono"
+                placeholder="Nome do responsável"
+                required
+            >
+
+            <button type="submit">
+                Cadastrar Animal
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+
+    </div>
+
+</main>
+
+<script src="js/novo-animal.js"></script>
+
+</body>
+</html>

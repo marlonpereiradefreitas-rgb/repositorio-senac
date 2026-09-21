@@ -1,0 +1,5 @@
+const express=require("express"),db=require("../db");const router=express.Router();
+router.post("/",async(req,res)=>{try{const v=[req.body.nome,req.body.especialidade,req.body.telefone];await db.execute("INSERT INTO veterinarios (nome,especialidade,telefone) VALUES (?,?,?)",v);res.status(201).json({mensagem:"Cadastro realizado com sucesso!"})}catch(e){console.error(e);res.status(500).json({mensagem:"Erro ao cadastrar."})}});
+router.get("/",async(req,res)=>{try{const [rows]=await db.execute("SELECT * FROM veterinarios ORDER BY id DESC");res.json(rows)}catch(e){res.status(500).json({mensagem:"Erro ao listar."})}});
+router.delete("/:id",async(req,res)=>{try{const [r]=await db.execute("DELETE FROM veterinarios WHERE id=?",[req.params.id]);res.json({mensagem:r.affectedRows?"Excluído com sucesso!":"Registro não encontrado."})}catch(e){res.status(500).json({mensagem:"Erro ao excluir."})}});
+module.exports=router;

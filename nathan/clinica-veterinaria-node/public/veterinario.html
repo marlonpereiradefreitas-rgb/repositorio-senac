@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Veterinário - Clínica</title>
+    <link rel="stylesheet" href="css/visual.css">
+</head>
+<body>
+
+<header>
+    <h1>Clínica Veterinária</h1>
+
+    <nav>
+        <a href="home.html">Início</a>
+        <a href="animais.html">Animais</a>
+        <a href="consultas.html">Consultas</a>
+        <a href="veterinarios.html">Veterinários</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="card">
+
+        <h2>Cadastrar Veterinário</h2>
+
+        <form id="formVeterinario">
+
+            <label for="nome">Nome</label>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Nome do veterinário"
+                required
+            >
+
+            <label for="crmv">CRMV</label>
+            <input
+                type="text"
+                id="crmv"
+                placeholder="Número do CRMV"
+                required
+            >
+
+            <label for="especialidade">Especialidade</label>
+            <input
+                type="text"
+                id="especialidade"
+                placeholder="Ex: Clínica Geral"
+                required
+            >
+
+            <button type="submit">
+                Cadastrar Veterinário
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+
+    </div>
+
+</main>
+
+<script src="js/novo-veterinario.js"></script>
+
+</body>
+</html>

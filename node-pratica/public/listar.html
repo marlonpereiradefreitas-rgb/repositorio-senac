@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Livros</title>
+    <link rel="stylesheet" href="my.css">
+</head>
+<body>
+
+    <h1>Lista de Livros</h1>
+
+    <button onclick="listarLivros()">Mostrar Dados</button>
+    <a href="index.html"><button>Voltar</button></a>
+
+    <table id="tabelaLivros">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Ano</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        function listarLivros() {
+
+       
+        fetch("/livros")
+
+// Converte a resposta recebida do servidor para o formato JSON (transformando os dados em um array de objetos)
+.then(res => res.json())
+
+// Executa este bloco após a conversão, recebendo o array de produtos vindo do banco de dados
+.then(produtos => {
+
+    // Seleciona o elemento HTML <tbody> pelo seu ID ("tabelaProdutos") onde as linhas serão inseridas
+    const tabela = document.getElementById("tabelaLivros");
+
+    // Percorre cada objeto (produto) dentro da lista de produtos retornada
+    produtos.forEach(produto => {
+
+        // Adiciona dinamicamente uma nova linha (tr) e colunas (td) preenchidas com os dados do produto na tabela
+        tabela.innerHTML += `
+            <tr>
+<td>${produto.id}</td>
+            </tr>
+        `;
+
+    });
+
+})
+
+}
+    </script>
+
+</body>
+</html>

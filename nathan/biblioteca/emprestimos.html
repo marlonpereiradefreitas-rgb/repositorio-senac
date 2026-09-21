@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos</title>
+    <link rel="stylesheet" href="emprestimos.css">
+</head>
+<body>
+
+    <h1>Empréstimo de Livros</h1>
+
+    <form id="formEmprestimo">
+
+        <label>Leitor</label>
+        <select id="leitor">
+            <option value="">Selecione um leitor</option>
+        </select>
+
+        <label>Livro</label>
+        <select id="livro">
+            <option value="">Selecione um livro</option>
+        </select>
+
+        <label>Data do Empréstimo</label>
+        <input type="date" id="dataEmprestimo">
+
+        <label>Data de Devolução</label>
+        <input type="date" id="dataDevolucao">
+
+        <button type="submit">Registrar Empréstimo</button>
+
+    </form>
+
+    <script src="emprestimos.js"></script>
+
+</body>
+</html>
